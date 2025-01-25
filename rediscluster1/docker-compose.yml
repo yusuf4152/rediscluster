@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  redis-master-1:
+    build: ./7000
+    container_name: redis-master-1
+    network_mode: "host"
+    ports:
+      - "7000:7000"
+
+  redis-master-2:
+    build: ./7001
+    container_name: redis-master-2
+    network_mode: "host"
+    ports:
+      - "7001:7001"
+
+  redis-master-3:
+    build: ./7002
+    container_name: redis-master-3
+    network_mode: "host"
+    ports:
+      - "7002:7002"
+
+  redis-replica-1:
+    build: ./7003
+    container_name: redis-replica-1
+    network_mode: "host"
+    ports:
+      - "7003:7003"
+
+  redis-replica-2:
+    build: ./7004
+    container_name: redis-replica-2
+    network_mode: "host"
+    ports:
+      - "7004:7004"
+
+  redis-replica-3:
+    build: ./7005
+    container_name: redis-replica-3
+    network_mode: "host"
+    ports:
+      - "7005:7005"
